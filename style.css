@@ -12,6 +12,7 @@
   box-shadow: 0 0 8px 1px gray;
   padding: 10px;
   margin: 10px;
+  background-color: white;
 }
 
 .shop-item img {
@@ -56,7 +57,7 @@
   width: 110px;
   height: 50px;
   background-color: lightcoral;
-  border: 1px solid #ddd;
+  border: 0;
   border-radius: 4px;
   outline: none;
   font-size: 18px;
@@ -68,4 +69,34 @@
   background-color: red;
   box-shadow: 0 0 5px 1px rgba(0, 140, 186, 0.5);
   cursor: pointer;
+}
+
+.empty-column {
+  width: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  background-color: lightgrey;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 110px;
+  margin: 10px auto auto;
+  box-shadow: 0 0 8px 1px gray;
+  padding: 20px;
+  background-color: white;
 }
