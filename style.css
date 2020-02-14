@@ -1,6 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  background-color: lightgrey;
+}
+
+header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  height: 100px;
+  width: auto;
+  z-index: 2;
+  background-color: white;
+  margin: auto auto 10px;
+  box-shadow: 0 0 8px 1px gray;
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  height: auto;
+  z-index: 1;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 110px;
+  margin: 10px auto auto;
+  box-shadow: 0 0 8px 1px gray;
+  padding: 20px;
+  background-color: white;
+}
+
+p {
+  margin: 0;
+}
+
 .partition {
-  float: left;
-  display: block;
   width: 440px;
 }
 
@@ -44,7 +88,7 @@
 .price {
   color: red;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 24px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -75,28 +119,48 @@
   width: 15px;
 }
 
-body {
+.shop-name {
+  font-family: 'Russo One', 'Arial', sans-serif;
+  font-size: 60px;
+  font-weight: normal;
   margin: 0;
-  padding: 0;
-  height: auto;
-  background-color: lightgrey;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  margin: 10px auto;
-  height: auto;
+.ad {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+  color: red;
 }
 
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.cart {
   position: relative;
-  height: 110px;
-  margin: 10px auto auto;
-  box-shadow: 0 0 8px 1px gray;
-  padding: 20px;
-  background-color: white;
+  margin-right: 6px;
+  height: 70px;
+  width: 70px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.cart:hover {
+  box-shadow: 0 0 5px 1px rgba(0, 140, 186, 0.5);
+  cursor: pointer;
+}
+
+.counter {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border: 0;
+  border-radius: 4px;
+  margin: 0;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: yellow;
+  cursor: pointer;
 }
