@@ -23,6 +23,8 @@ header {
 main {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 10px auto;
   height: auto;
   z-index: 1;
@@ -32,7 +34,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   height: 110px;
   margin: 10px auto auto;
   box-shadow: 0 0 8px 1px gray;
@@ -44,29 +45,21 @@ p {
   margin: 0;
 }
 
-.partition {
-  width: 440px;
-}
-
 .shop-item {
-  position: relative;
-  display: inline-block;
-  width: 400px;
+  width: 70%;
   height: auto;
   box-shadow: 0 0 8px 1px gray;
-  padding: 10px;
-  margin: 10px;
+  padding: 20px;
+  margin: 10px auto;
   background-color: white;
 }
 
 .shop-item img {
-  float: right;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
   width: 150px;
   margin-left: 10px;
-  margin-bottom: 10px;
 }
 
 .shop-item ul {
@@ -78,6 +71,25 @@ p {
 .shop-item li::before {
   content: '•';
   margin-right: 5px;
+}
+
+.shop-item table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+}
+
+.shop-item tr, td {
+  padding: 0;
+}
+
+.img-td {
+  width: 172px;
+  vertical-align: top;
+}
+
+.button-td {
+  vertical-align: bottom;
 }
 
 .heading {
@@ -94,12 +106,9 @@ p {
 }
 
 .cart-button {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  display: inline-block;
   width: 110px;
   height: 50px;
+  margin-left: 62px;
   background-color: lightcoral;
   border: 0;
   border-radius: 4px;
