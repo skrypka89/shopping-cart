@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  height: auto;
   background-color: lightgrey;
 }
 
@@ -13,9 +12,9 @@ header {
   top: 0;
   height: 100px;
   width: auto;
-  z-index: 2;
+  z-index: 1;
   background-color: white;
-  margin: auto auto 10px;
+  margin: 0 auto;
   box-shadow: 0 0 8px 1px gray;
   padding: 20px;
 }
@@ -25,9 +24,8 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 10px auto;
+  margin: 0 auto;
   height: auto;
-  z-index: 1;
 }
 
 footer {
@@ -35,7 +33,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   height: 110px;
-  margin: 10px auto auto;
+  margin: 0 auto;
   box-shadow: 0 0 8px 1px gray;
   padding: 20px;
   background-color: white;
@@ -50,7 +48,7 @@ p {
   height: auto;
   box-shadow: 0 0 8px 1px gray;
   padding: 20px;
-  margin: 10px auto;
+  margin: 20px auto;
   background-color: white;
 }
 
@@ -79,7 +77,8 @@ p {
   border-collapse: collapse;
 }
 
-.shop-item tr, td {
+.shop-item tr,
+.shop-item td {
   padding: 0;
 }
 
@@ -171,5 +170,155 @@ p {
   font-size: 18px;
   font-weight: bold;
   color: yellow;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  z-index: 2;
+  display: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  margin: 20px 20px auto;
+  width: 35%;
+  height: auto;
+  box-shadow: 0 0 8px 1px gray;
+  padding: 15px 15px 20px 15px;
+}
+
+.modal-table {
+  border: none;
+  border-collapse: collapse;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.modal-table th,
+.modal-table td {
+  padding: 5px;
+}
+
+.modal-table th {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.modal-table tr[id="item"]:hover {
+  background-color: lightgrey;
+}
+
+.modal-table-column-1 {
+  text-align: left;
+}
+
+.modal-table-column-2 {
+  text-align: center;
+  width: 26%;
+}
+
+.modal-table-column-3 {
+  text-align: right;
+  width: 30px;
+}
+
+.close-modal-span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: gray;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal-span:hover,
+.close-modal-span:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal-buttons {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.modal-button {
+  height: 50px;
+  background-color: lightcoral;
+  border: 0;
+  border-radius: 4px;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: yellow;
+}
+
+.modal-button:hover {
+  background-color: red;
+  box-shadow: 0 0 5px 1px rgba(0, 140, 186, 0.5);
+  cursor: pointer;
+}
+
+.remove-item-button {
+  width: 30px;
+  height: 30px;
+  background-color: lightcoral;
+  border: 0;
+  border-radius: 4px;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: yellow;
+}
+
+.remove-item-button:hover {
+  background-color: red;
+  box-shadow: 0 0 5px 1px rgba(0, 140, 186, 0.5);
+  cursor: pointer;
+}
+
+.notice {
+  position: sticky;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 140px;
+  width: auto;
+  z-index: 1;
+  margin: 0;
+  box-shadow: 0 0 8px 1px gray;
+  padding: 20px;
+}
+
+.notice-content {
+  position: relative;
+}
+
+.close-notice-span {
+  position: absolute;
+  float: right;
+  top: -20px;
+  right: -17px;
+  color: gray;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-notice-span:hover,
+.close-notice-span:focus {
+  color: #000;
+  text-decoration: none;
   cursor: pointer;
 }
