@@ -51,7 +51,7 @@ export default class ModalComponent extends Component {
     removeItem(this.anchor.querySelectorAll('.remove-item-button'));
     overflowModal(this.anchor.querySelector('.modal'));
     shoppingResult(this.anchor.querySelectorAll('.modal-button'));
-    this.anchor.querySelector('#shop-items').addEventListener('click', processItem);
+    this.anchor.querySelector('main').addEventListener('click', processItem);
     this.anchor.querySelector('.cart').addEventListener('click', displayModal);
   }
 }

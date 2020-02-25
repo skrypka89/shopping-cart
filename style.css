@@ -8,15 +8,14 @@ header {
   position: sticky;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   top: 0;
-  height: 100px;
   width: auto;
   z-index: 1;
   background-color: white;
   margin: 0 auto;
   box-shadow: 0 0 8px 1px gray;
-  padding: 20px;
+  padding: 20px 20px 0;
 }
 
 main {
@@ -24,7 +23,7 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin: 10px auto;
   height: auto;
 }
 
@@ -32,15 +31,44 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 110px;
   margin: 0 auto;
   box-shadow: 0 0 8px 1px gray;
   padding: 20px;
   background-color: white;
 }
 
+footer table {
+  border: none;
+  border-collapse: collapse;
+}
+
+footer table td {
+  padding: 0;
+}
+
 p {
   margin: 0;
+}
+
+form {
+  margin: 15px 0 20px;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+  color: #3d7ee5;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 .shop-item {
@@ -48,7 +76,7 @@ p {
   height: auto;
   box-shadow: 0 0 8px 1px gray;
   padding: 20px;
-  margin: 20px auto;
+  margin: 10px auto;
   background-color: white;
 }
 
@@ -124,14 +152,14 @@ p {
 }
 
 .empty-column {
-  width: 15px;
+  width: 24px;
 }
 
-.shop-name {
+.shop-heading {
   font-family: 'Russo One', 'Arial', sans-serif;
   font-size: 60px;
   font-weight: normal;
-  margin: 0;
+  margin: -10px 0 0;
 }
 
 .ad {
@@ -143,7 +171,6 @@ p {
 
 .cart {
   position: relative;
-  margin-right: 6px;
   height: 70px;
   width: 70px;
   border: 1px solid #ddd;
@@ -154,6 +181,13 @@ p {
 .cart:hover {
   box-shadow: 0 0 5px 1px rgba(0, 140, 186, 0.5);
   cursor: pointer;
+}
+
+.shop-heading-and-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .counter {
@@ -290,15 +324,12 @@ p {
 }
 
 .notice {
-  position: sticky;
   display: none;
   align-items: center;
   justify-content: center;
-  top: 140px;
-  width: auto;
+  width: 100%;
   z-index: 1;
   margin: 0;
-  box-shadow: 0 0 8px 1px gray;
   padding: 20px;
 }
 

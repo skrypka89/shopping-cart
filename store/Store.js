@@ -4,7 +4,8 @@ export default class Store {
   constructor(reducers) {
     this.reducers = reducers;
     this.state = {
-      items: []
+      items: [],
+      sorting: 'initial'
     };
     this.events = new Observer();
   }

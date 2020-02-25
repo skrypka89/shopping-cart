@@ -14,6 +14,10 @@ export default function createReducers() {
     removeAllItems: (payload, state) => ({
       ...state,
       items: []
+    }),
+    changeSorting: (payload, state) => ({
+      ...state,
+      sorting: payload
     })
   };
 }
