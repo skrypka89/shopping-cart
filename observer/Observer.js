@@ -3,21 +3,27 @@ export default class Observer{
     this.subscribers = {};
   }
 
-  subscribe(componentId, callback) {
-    if (!this.subscribers[componentId]) {
-      this.subscribers[componentId] = [];
+  subscribe(componentsId, callback) {
+    for (let componentId of componentsId) {
+      if (!this.subscribers[componentId]) {
+        this.subscribers[componentId] = [];
+      }
+
+      this.subscribers[componentId].push(callback);
+    } 
+  }
+
+  unsubscribe(componentsId, callback) {
+    for (let componentId of componentsId) {
+      this.subscribers[componentId] = this.subscribers[componentId]
+        .filter(cb => cb !== callback)
+      ;
     }
-
-    this.subscribers[componentId].push(callback);
   }
 
-  unsubscribe(componentId, callback) {
-    this.subscribers[componentId] = this.subscribers[componentId]
-      .filter(cb => cb !== callback)
-    ;
-  }
-
-  next(componentId, payload) {
-    this.subscribers[componentId].forEach(cb => cb(payload));
+  next(componentsId, payload) {
+    for (let componentId of componentsId) {
+      this.subscribers[componentId].forEach(cb => cb(payload));
+    }
   }
 }

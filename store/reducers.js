@@ -18,6 +18,14 @@ export default function createReducers() {
     changeSorting: (payload, state) => ({
       ...state,
       sorting: payload
+    }),
+    changeCurrency: (payload, state) => ({
+      ...state,
+      currency: payload
+    }),
+    setRates: (payload, state) => ({
+      ...state,
+      rates: payload
     })
   };
 }

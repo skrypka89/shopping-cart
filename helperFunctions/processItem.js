@@ -6,8 +6,8 @@ export default function processItem(event) {
   const table = event.target.closest('table');
   const heading = table.querySelector('.heading').firstChild.data.trim();
   const price = parseFloat(table.querySelector('.price')
-    .firstChild.data.trim().replace(/\s/g, '')
+    .firstChild.data.trim().replace(/,/, '')
   );
 
-  store.dispatch('addItem', 'modal', { heading, price });
+  store.dispatch('addItem', ['modal'], { heading, price });
 }

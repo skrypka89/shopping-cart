@@ -31,14 +31,22 @@
           <button class="counter" type="button" hidden>0</button>
         </div>
       </div>
-      <form name="select">
-        <span><b>Сортировать список товаров по:</b></span>
+      <form name="selects">
+        <span><b>Сортировать список товаров по: &emsp;</b></span>
         <select name="sorting">
-          <option value="initial" selected>умолчанию</option>
+          <option value="initial">умолчанию</option>
           <option value="price-increase">возрастанию цены</option>
           <option value="price-decrease">убыванию цены</option>
           <option value="a-z-sorting">названию А-Я</option>
           <option value="z-a-sorting">названию Я-А</option>
+        </select>
+        <span class="white-space"></span>
+        <span><b>Валюта: &emsp;</b></span>
+        <select name="currency">
+          <option value="UAH">гривна (UAH)</option>
+          <option value="USD">доллар США (USD)</option>
+          <option value="EUR">евро (EUR)</option>
+          <option value="GBP">фунт стерлингов (GBP)</option>
         </select>
       </form>
       <div class="notice">
@@ -54,7 +62,7 @@
           <tr>
             <td rowspan="2">
               <h2 class="heading">Конвектор Domotec MS-5904</h2>
-              <p class="price">690 грн</p>
+              <p class="price" data-currency="&#8372;">690.00</p>
               <p><b>Характеристики:</b></p>
               <ul>
                 <li>Цвет: белый;</li>
@@ -85,7 +93,7 @@
           <tr>
             <td rowspan="2">
               <h2 class="heading">Шуруповерт Dnipro-M CD-121Q</h2>
-              <p class="price">1 599 грн</p>
+              <p class="price" data-currency="&#8372;">1,599.00</p>
               <p><b>Характеристики:</b></p>
               <ul>
                 <li>Питание: аккумулятор;</li>
@@ -116,7 +124,7 @@
           <tr>
             <td rowspan="2">
               <h2 class="heading">Электронная книга Amazon Kindle 5 Black</h2>
-              <p class="price">1 995 грн</p>
+              <p class="price" data-currency="&#8372;">1,995.00</p>
               <p><b>Характеристики:</b></p>
               <ul>
                 <li>Диагональ: 6 дюймов;</li>
@@ -147,7 +155,7 @@
           <tr>
             <td rowspan="2">
               <h2 class="heading">Душевой набор (гарнитур) Hansgrohe Crometta Vario EcoSmart Porter Set 26694400</h2>
-              <p class="price">1 052 грн</p>
+              <p class="price" data-currency="&#8372;">1,052.00</p>
               <p><b>Характеристики:</b></p>
               <ul>
                 <li>Материал изготовления: пластик/ металл;</li>
@@ -178,7 +186,7 @@
           <tr>
             <td rowspan="2">
               <h2 class="heading">Вентилятор настольный AEG VL 5528</h2>
-              <p class="price">768 грн</p>
+              <p class="price" data-currency="&#8372;">768.00</p>
               <p><b>Характеристики:</b></p>
               <ul>
                 <li>Цвет: черный;</li>
@@ -209,7 +217,7 @@
           <tr>
             <td rowspan="2">
               <h2 class="heading">Стремянка Forte LFD 106TB</h2>
-              <p class="price">507 грн</p>
+              <p class="price" data-currency="&#8372;">507.00</p>
               <p><b>Характеристики:</b></p>
               <ul>
                 <li>Конструкция: односторонняя</li>
@@ -240,7 +248,7 @@
           <tr>
             <td rowspan="2">
               <h2 class="heading">Проводной телефон Panasonic KX-TS2350UAB Black</h2>
-              <p class="price">479 грн</p>
+              <p class="price" data-currency="&#8372;">479.00</p>
               <p><b>Характеристики:</b></p>
               <ul>
                 <li>Цвет: черный;</li>
@@ -271,7 +279,7 @@
           <tr>
             <td rowspan="2">
               <h2 class="heading">Кресло обычное Signal Ricardo</h2>
-              <p class="price">1 634 грн</p>
+              <p class="price" data-currency="&#8372;">1,634.00</p>
               <p><b>Характеристики:</b></p>
               <ul>
                 <li>Цвет: серый</li>
@@ -302,7 +310,7 @@
           <tr>
             <td rowspan="2">
               <h2 class="heading">Мультимедийная акустика Trust Vigor Speaker Set 21759</h2>
-              <p class="price">599 грн</p>
+              <p class="price" data-currency="&#8372;">599.00</p>
               <p><b>Характеристики:</b></p>
               <ul>
                 <li>Цвет: коричневый;</li>
@@ -330,7 +338,7 @@
       </div>
     </main>
     <footer>
-      <p><b>Адрес магазина:</b> &emsp; г. Чернигов, ул. Хозяйственная, д. 1</p>
+      <p><b>Адрес магазина:</b> &emsp; Украина, г. Чернигов, ул. Хозяйственная, д. 1</p>
       <table>
         <tr>
           <td><b>Email:</b></td><td class="empty-column"></td><td>info@bytovukha.com</td>

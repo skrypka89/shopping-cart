@@ -1,15 +1,16 @@
 import Component from './Component.js';
 import store from '../store/index.js';
-import processItem from '../helperFunctions/processItem.js';
-import displayModal from '../helperFunctions/displayModal.js';
+import modifyPriceHeading from '../helperFunctions/modifyPriceHeading.js';
+import hiddenElements from '../helperFunctions/hiddenElements.js';
 import removeItem from '../helperFunctions/removeItem.js';
 import overflowModal from '../helperFunctions/overflowModal.js';
 import shoppingResult from '../helperFunctions/shoppingResult.js';
-import hiddenElements from '../helperFunctions/hiddenElements.js';
+import processItem from '../helperFunctions/processItem.js';
+import displayModal from '../helperFunctions/displayModal.js';
 
 export default class ModalComponent extends Component {
   constructor(anchor) {
-    super('modal', store);
+    super(['modal'], store);
 
     this.anchor = anchor;
   }
@@ -24,14 +25,14 @@ export default class ModalComponent extends Component {
     this.anchor.querySelector('.modal-table').innerHTML = `
       <tr>
         <th class="modal-table-column-1">Название товара</th>
-        <th class="modal-table-column-2">Цена, грн</th>
+        <th class="modal-table-column-2">Цена, </th>
         <th class="modal-table-column-3"></th>
       </tr>
       ${store.state.items.map(shopItem => `
         <tr id="item">
           <td class="modal-table-column-1">${shopItem.heading}</td>
           <td class="modal-table-column-2">
-            ${shopItem.price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
+            ${shopItem.price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
           </td>
           <td class="modal-table-column-3">
             <button class="remove-item-button">&times;</button>
@@ -41,12 +42,13 @@ export default class ModalComponent extends Component {
       <tr>
         <td class="modal-table-column-1"><b>Всего</b></td>
         <td class="modal-table-column-2">
-          <b>${totalPrice.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ")}</b>
+          <b>${totalPrice.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</b>
         </td>
         <td class="modal-table-column-3"></td>
       </tr>
     `;
 
+    modifyPriceHeading(this.anchor.querySelector('th.modal-table-column-2'));
     hiddenElements(this.anchor, itemsNum);
     removeItem(this.anchor.querySelectorAll('.remove-item-button'));
     overflowModal(this.anchor.querySelector('.modal'));

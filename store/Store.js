@@ -5,15 +5,21 @@ export default class Store {
     this.reducers = reducers;
     this.state = {
       items: [],
-      sorting: 'initial'
+      sorting: 'initial',
+      currency: 'UAH',
+      rates: {
+        USD: undefined,
+        EUR: undefined,
+        GBP: undefined
+      }
     };
     this.events = new Observer();
   }
 
-  dispatch(actionType, componentId, payload) {
+  dispatch(actionType, componentsId, payload) {
     if (this.reducers[actionType]) {
       this.state = this.reducers[actionType](payload, this.state);
-      this.events.next(componentId, this.state);
+      this.events.next(componentsId, this.state);
     }
   }
 }

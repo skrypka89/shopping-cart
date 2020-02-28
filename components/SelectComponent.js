@@ -1,18 +1,18 @@
 import Component from "./Component.js";
 import store from "../store/index.js";
 import changeSorting from "../helperFunctions/changeSorting.js";
-import sorting from "../helperFunctions/sorting.js";
+import sortItems from "../helperFunctions/sortItems.js";
 
 export default class SelectComponent extends Component {
-  constructor(anchor, initial) {
-    super('select', store);
+  constructor(anchor, initialItems) {
+    super(['select'], store);
 
     this.anchor = anchor;
-    this.initial = initial;
+    this.initialItems = initialItems;
   }
 
   render() {
-    this.anchor.forms.select.sorting.addEventListener('change', changeSorting);
-    sorting(this.anchor.querySelector('main'), this.initial);
+    this.anchor.forms.selects.sorting.addEventListener('change', changeSorting);
+    sortItems(this.anchor.querySelector('main'), this.initialItems);
   }
 }

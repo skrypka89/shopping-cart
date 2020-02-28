@@ -7,7 +7,7 @@ export default function handleShopping(event, noticeColor, noticeText) {
   notice.style.backgroundColor = noticeColor;
   notice.querySelector('p').innerHTML = noticeText;
   event.target.closest('.modal').style.display = 'none';
-  store.dispatch('removeAllItems', 'modal', undefined);
+  store.dispatch('removeAllItems', ['modal'], undefined);
 
   notice.querySelector('.close-notice-span').onclick = function() {
     notice.style.display = 'none';

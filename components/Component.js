@@ -1,6 +1,6 @@
 export default class Component {
-  constructor(componentId, store) {
+  constructor(componentsId, store) {
     this._render_ = this.render.bind(this);
-    store.events.subscribe(componentId, this._render_);
+    store.events.subscribe(componentsId, this._render_);
   }
 }

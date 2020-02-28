@@ -1,15 +1,15 @@
 import store from "../store/index.js";
 import sortingFunction from "./sortingFunction.js";
 
-export default function sorting(main, initial) {
+export default function sortItems(main, initialItems) {
   const sortingState = store.state.sorting;
   const shopItems = main.querySelectorAll('.shop-item');
-  let data = [];
+  const data = [];
 
   shopItems.forEach((shopItem, i) =>
     data.push({
       price: parseFloat(
-        shopItem.querySelector('.price').firstChild.data.trim().replace(/\s/g, '')
+        shopItem.querySelector('.price').firstChild.data.trim().replace(/,/, '')
       ),
       heading: shopItem.querySelector('.heading').firstChild.data.trim(),
       index: i
@@ -18,7 +18,7 @@ export default function sorting(main, initial) {
 
   switch (sortingState) {
     case 'initial':
-      initial.forEach(item => main.append(item));
+      initialItems.forEach(item => main.append(item));
       break;
 
     case 'price-increase':
