@@ -1,6 +1,8 @@
 import store from "../store/index.js";
 import setRequests from "./setRequests.js";
 
+/* Obtain the currency rates from the NBU server
+and store them in the storage */
 export default async function setRates() {
   const acronyms = ['USD', 'EUR', 'GBP'];
   const date = new Date();

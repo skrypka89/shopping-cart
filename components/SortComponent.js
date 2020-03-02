@@ -3,9 +3,10 @@ import store from "../store/index.js";
 import changeSorting from "../helperFunctions/changeSorting.js";
 import sortItems from "../helperFunctions/sortItems.js";
 
-export default class SelectComponent extends Component {
+//SortComponent sets the sorting of the shop items
+export default class SortComponent extends Component {
   constructor(anchor, initialItems) {
-    super(['select'], store);
+    super(['sort'], store);
 
     this.anchor = anchor;
     this.initialItems = initialItems;

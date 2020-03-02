@@ -1,3 +1,4 @@
+//Creation of the reducers indicating how to change the state in the storage
 export default function createReducers() {
   return {
     addItem: (payload, state) => ({

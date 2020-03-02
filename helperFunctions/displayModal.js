@@ -1,5 +1,6 @@
 import overflowModal from "./overflowModal.js";
 
+//Show or hide the modal window
 export default function displayModal() {
   const modal = this.closest('header').previousElementSibling;
   const closeModal = modal.querySelector('.close-modal-span');

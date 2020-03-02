@@ -1,5 +1,6 @@
 import Observer from '../observer/Observer.js';
 
+//Store class represents a logic of the storage of the state 
 export default class Store {
   constructor(reducers) {
     this.reducers = reducers;
@@ -15,7 +16,8 @@ export default class Store {
     };
     this.events = new Observer();
   }
-
+  
+  //Change the state in the storage
   dispatch(actionType, componentsId, payload) {
     if (this.reducers[actionType]) {
       this.state = this.reducers[actionType](payload, this.state);

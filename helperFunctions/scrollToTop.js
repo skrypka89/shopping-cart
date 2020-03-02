@@ -1,3 +1,4 @@
+//Slow scrolling to the top of the window
 export default function scrollToTop() {
   const distance = document.documentElement.scrollTop || document.body.scrollTop;
     

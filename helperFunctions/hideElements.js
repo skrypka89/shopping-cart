@@ -1,4 +1,6 @@
-export default function hiddenElements(anchor, itemsNum) {
+/* Whether show or not the counter on the cart icon and the buttons
+under the table in the modal window */
+export default function hideElements(anchor, itemsNum) {
   if (itemsNum) {
     anchor.querySelector('.counter').innerHTML = itemsNum;
     anchor.querySelector('.counter').hidden = false;

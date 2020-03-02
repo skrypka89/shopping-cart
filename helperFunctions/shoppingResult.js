@@ -1,5 +1,6 @@
 import handleShopping from "./handleShopping.js";
 
+//Messages if the modal buttons are clicked
 export default function shoppingResult(modalButtons) {
   modalButtons.forEach((button, id) => {
     if (id == 0) {

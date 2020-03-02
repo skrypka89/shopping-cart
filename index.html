@@ -10,6 +10,7 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   </head>
   <body>
+    <!-- Modal window -->
     <div class="modal">
       <div class="modal-content">
         <span class="close-modal-span">&times;</span>
@@ -26,6 +27,7 @@
           <h1 class="shop-heading">БЫТОВУХА.COM</h1>
           <p class="ad">Все для отношений с домом!</p>
         </div>
+        <!-- Cart icon -->
         <div class="cart">
           <img src="./images/cart_icon.svg" alt="cart_icon">
           <button class="counter" type="button" hidden>0</button>
@@ -33,6 +35,7 @@
       </div>
       <form name="selects">
         <span><b>Сортировать список товаров по: &emsp;</b></span>
+        <!-- Select for the sorting of the shop items -->
         <select name="sorting">
           <option value="initial">умолчанию</option>
           <option value="price-increase">возрастанию цены</option>
@@ -42,6 +45,7 @@
         </select>
         <span class="white-space"></span>
         <span><b>Валюта: &emsp;</b></span>
+        <!-- Select with the currency choices -->
         <select name="currency">
           <option value="UAH">гривна (UAH)</option>
           <option value="USD">доллар США (USD)</option>
@@ -49,6 +53,7 @@
           <option value="GBP">фунт стерлингов (GBP)</option>
         </select>
       </form>
+      <!-- Notification about shopping result -->
       <div class="notice">
         <div class="notice-content">
           <span class="close-notice-span">&times;</span>
@@ -57,6 +62,7 @@
       </div>
     </header>
     <main>
+      <!-- List of the shop items -->
       <div class="shop-item">
         <table>
           <tr>
@@ -338,6 +344,7 @@
       </div>
     </main>
     <footer>
+      <!-- Contact information -->
       <p><b>Адрес магазина:</b> &emsp; Украина, г. Чернигов, ул. Хозяйственная, д. 1</p>
       <table>
         <tr>
@@ -361,6 +368,7 @@
       </table>
     </footer>
 
+    <!-- Initial script -->
     <script type="module" src="main.js"></script>
   </body>
 </html>

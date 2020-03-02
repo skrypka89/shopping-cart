@@ -1,13 +1,14 @@
 import Component from './Component.js';
 import store from '../store/index.js';
 import modifyPriceHeading from '../helperFunctions/modifyPriceHeading.js';
-import hiddenElements from '../helperFunctions/hiddenElements.js';
+import hideElements from '../helperFunctions/hideElements.js';
 import removeItem from '../helperFunctions/removeItem.js';
 import overflowModal from '../helperFunctions/overflowModal.js';
 import shoppingResult from '../helperFunctions/shoppingResult.js';
 import processItem from '../helperFunctions/processItem.js';
 import displayModal from '../helperFunctions/displayModal.js';
 
+//ModalComponent controls the modal window and shop items in there
 export default class ModalComponent extends Component {
   constructor(anchor) {
     super(['modal'], store);
@@ -22,6 +23,7 @@ export default class ModalComponent extends Component {
       0
     ;
 
+    //Information about all chosen shop items is presented in the table in the modal window
     this.anchor.querySelector('.modal-table').innerHTML = `
       <tr>
         <th class="modal-table-column-1">Название товара</th>
@@ -49,7 +51,7 @@ export default class ModalComponent extends Component {
     `;
 
     modifyPriceHeading(this.anchor.querySelector('th.modal-table-column-2'));
-    hiddenElements(this.anchor, itemsNum);
+    hideElements(this.anchor, itemsNum);
     removeItem(this.anchor.querySelectorAll('.remove-item-button'));
     overflowModal(this.anchor.querySelector('.modal'));
     shoppingResult(this.anchor.querySelectorAll('.modal-button'));

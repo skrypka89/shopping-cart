@@ -1,3 +1,5 @@
+/* Observer is responsible for the subscription of callbacks which are launched
+every time when the state of the storage is changed */
 export default class Observer{
   constructor() {
     this.subscribers = {};
@@ -21,6 +23,7 @@ export default class Observer{
     }
   }
 
+  //Broadcasting of the subscribers
   next(componentsId, payload) {
     for (let componentId of componentsId) {
       this.subscribers[componentId].forEach(cb => cb(payload));

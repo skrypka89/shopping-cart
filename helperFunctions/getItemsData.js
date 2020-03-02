@@ -1,3 +1,4 @@
+//Get initial data about price and heading of each shop item
 export default function getItemsData(initialItems) {
   const initialData = [];
 

@@ -1,5 +1,6 @@
 import store from "../store/index.js";
 
+//Add a shop item to the table in the modal window
 export default function processItem(event) {
   if (event.target.className != 'cart-button') return;
 

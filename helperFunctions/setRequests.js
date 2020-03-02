@@ -1,3 +1,4 @@
+//Set an array of fetch requests
 export default function setRequests(urls) {
   const requests = [];
 

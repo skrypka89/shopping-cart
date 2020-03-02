@@ -1,3 +1,4 @@
+//Component class is used for the rendering of changed DOM elements
 export default class Component {
   constructor(componentsId, store) {
     this._render_ = this.render.bind(this);

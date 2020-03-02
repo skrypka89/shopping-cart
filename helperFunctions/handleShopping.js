@@ -1,5 +1,6 @@
 import store from "../store/index.js";
 
+//Onclick handler of the events in the shoppingResult function
 export default function handleShopping(event, noticeColor, noticeText) {
   const notice = event.target.closest('body').querySelector('.notice');
 
