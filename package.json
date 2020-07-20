@@ -1,0 +1,22 @@
+{
+  "name": "shopping-cart",
+  "version": "1.0.0",
+  "description": "A simple application with a list of shop items and shopping cart. Written using HTML, CSS and plain JavaScript.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skrypka89/shopping-cart.git"
+  },
+  "author": "Oleksandr Skrypka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skrypka89/shopping-cart/issues"
+  },
+  "homepage": "https://github.com/skrypka89/shopping-cart#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
